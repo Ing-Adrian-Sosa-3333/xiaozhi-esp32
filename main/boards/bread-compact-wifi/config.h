@@ -56,4 +56,14 @@
 // A MCP Test: Control a lamp
 #define LAMP_GPIO GPIO_NUM_18
 
+// ===== L298N - carrito de 2 motores =====
+// Motor A (izquierdo)
+#define CAR_IN1_GPIO GPIO_NUM_8
+#define CAR_IN2_GPIO GPIO_NUM_9
+#define CAR_ENA_GPIO GPIO_NUM_12   // PWM velocidad (quitar jumper ENA del L298N)
+// Motor B (derecho)
+#define CAR_IN3_GPIO GPIO_NUM_10
+#define CAR_IN4_GPIO GPIO_NUM_11
+#define CAR_ENB_GPIO GPIO_NUM_13   // PWM velocidad (quitar jumper ENB del L298N)
+
 #endif // _BOARD_CONFIG_H_

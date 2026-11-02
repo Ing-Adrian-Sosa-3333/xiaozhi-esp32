@@ -7,6 +7,7 @@
 #include "config.h"
 #include "mcp_server.h"
 #include "lamp_controller.h"
+#include "car_controller.h"
 #include "led/single_led.h"
 #include "assets/lang_config.h"
 
@@ -150,6 +151,8 @@ private:
     // 物联网初始化，逐步迁移到 MCP 协议
     void InitializeTools() {
         static LampController lamp(LAMP_GPIO);
+        static CarController car(CAR_IN1_GPIO, CAR_IN2_GPIO, CAR_IN3_GPIO, CAR_IN4_GPIO,
+                                 CAR_ENA_GPIO, CAR_ENB_GPIO);
     }
 
 public:
